@@ -1,0 +1,37 @@
+3
+Nike shoes
+Ghaziabad
+NIk3312
+true
+3500
+01/01/2021
+www.nike.com
+Only nike product
+C:\Users\SHIVAM\Desktop\nike1.jpg
+Royal enfield
+Delhi
+RENF123432
+true
+250000
+12/31/2020
+www.royal.org
+Royal Enflied
+C:\Users\SHIVAM\Desktop\royal enfield.png
+Cannondale Bicycle
+Furnace Room
+TREK943793793
+true
+500
+03/22/1995
+Aurora Cycle,Seattle
+Vintage Bike
+C:\Users\SHIVAM\Desktop\bicycle.png
+8
+Always Lost
+Basement Office
+Driveway
+Family Room
+Furnace Room
+My Office
+Under My desk
+Under the Other Desk
