@@ -62,7 +62,7 @@ public class HomeInventory extends JFrame
 	{
 		public void windowClosing(WindowEvent evt)
 		{
-			dispose();
+			System.exit(0);
 		}
 	});
 	
