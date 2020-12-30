@@ -50,7 +50,6 @@ public class HomeInventory extends JFrame
 	super("Home Inventory");
 	Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
 	setBounds((int)(0.5 * (screenSize.width - getWidth())), (int) (0.5 * (screenSize.height-getHeight())), getWidth(), getHeight());
-	//setSize(Toolkit.getDefaultToolkit().getScreenSize());
 	setResizable(false);
 	c=getContentPane();
 	setVisible(true);
@@ -136,8 +135,8 @@ public class HomeInventory extends JFrame
 	savebutton.setVerticalTextPosition(SwingConstants.BOTTOM);
 	savebutton.setFocusable(false);
 	inventorytoolbar.add(savebutton);
-    savebutton.addActionListener(new ActionListener() 
-    {	
+        savebutton.addActionListener(new ActionListener() 
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			//check for description
@@ -220,8 +219,8 @@ public class HomeInventory extends JFrame
 			currententry--;
 			showentry(currententry);
 			
-	    }
-	}	);
+	         }
+    });
     
     nextbutton=new JButton(new ImageIcon(this.getClass().getResource("/next.gif")));
     nextbutton.setText("Next");
@@ -240,7 +239,7 @@ public class HomeInventory extends JFrame
 			currententry++;
 			showentry(currententry);
 	  	}
-	});
+     });
     
     inventorytoolbar.addSeparator();
     
@@ -254,7 +253,7 @@ public class HomeInventory extends JFrame
 	inventorytoolbar.add(printbutton);
 	
 	printbutton.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			lastpage=(int)(1+(numberentries-1)/entriesperpage);
@@ -279,7 +278,7 @@ public class HomeInventory extends JFrame
 	exitbutton.setFocusable(false);
 	inventorytoolbar.add(exitbutton);
 	exitbutton.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e)
 		{
 			if(JOptionPane.showConfirmDialog(null, "Any unsaved changes will be lost.\n Are you sure you want to exit?" , "Exit Program" , JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE)==JOptionPane.NO_OPTION)
@@ -337,12 +336,12 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(itemtextfield,gridConstraints);
 	itemtextfield.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			locationcombobox.requestFocus();
-	    }
-	}	);
+	        }
+	});
 	
 	locationlabel=new JLabel("Location");
 	gridConstraints=new GridBagConstraints();
@@ -365,7 +364,7 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(locationcombobox,gridConstraints);
 	locationcombobox.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			//found in combobox
@@ -385,7 +384,7 @@ public class HomeInventory extends JFrame
 			locationcombobox.addItem(locationcombobox.getSelectedItem());
 			serialtextfield.requestFocus();
 	    }
-	}	);
+	});
 	
 	
 	markedcheckbox=new JCheckBox();
@@ -416,12 +415,12 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(serialtextfield,gridConstraints);
 	serialtextfield.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			pricetextfield.requestFocus();
 	    }
-	}	);
+	});
 	
 	pricelabel=new JLabel("Purchase Price");
 	gridConstraints=new GridBagConstraints();
@@ -441,12 +440,12 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(pricetextfield,gridConstraints);
 	pricetextfield.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			datedatechooser.requestFocus();
 		}	
-    });
+        });
 	
 	datelabel=new JLabel("Date Purchased");
 	gridConstraints=new GridBagConstraints();
@@ -491,12 +490,12 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(storetextfield,gridConstraints);
 	storetextfield.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			notetextfield.requestFocus();
 		}	
-    });
+        });
 	
 	notelabel=new JLabel("Note");
 	gridConstraints=new GridBagConstraints();
@@ -516,12 +515,12 @@ public class HomeInventory extends JFrame
 	gridConstraints.anchor=GridBagConstraints.WEST;
 	c.add(notetextfield,gridConstraints);
 	notetextfield.addActionListener(new ActionListener() 
-    {	
+        {	
 		public void actionPerformed(ActionEvent e) 
 		{
 			photobutton.requestFocus();
 		}	
-    });
+        });
 	
 	photolabel=new JLabel("Photo");
 	gridConstraints=new GridBagConstraints();
