@@ -48,7 +48,9 @@ public class HomeInventory extends JFrame
 	public HomeInventory()
 	{
 	super("Home Inventory");
-	setSize(Toolkit.getDefaultToolkit().getScreenSize());
+	Dimension screenSize=Toolkit.getDefaultToolkit().getScreenSize();
+	setBounds((int)(0.5 * (screenSize.width - getWidth())), (int) (0.5 * (screenSize.height-getHeight())), getWidth(), getHeight());
+	//setSize(Toolkit.getDefaultToolkit().getScreenSize());
 	setResizable(false);
 	c=getContentPane();
 	setVisible(true);
@@ -684,6 +686,7 @@ public class HomeInventory extends JFrame
 		previousbutton.setEnabled(false);
 		printbutton.setEnabled(false);
 	}
+	pack();
 }
 
 	public void sizeButton(JButton b,Dimension d)
